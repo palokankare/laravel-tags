@@ -64,7 +64,7 @@ class Tag extends Model implements Sortable
     {
         $locale = $locale ?? app()->getLocale();
 
-        $string = '"' . $locale . '": "' . $name . '"'; // Added for MySQL 5.6 hotfix
+        $string = '"' . $locale . '":"' . $name . '"'; // Added for MySQL 5.6 hotfix
 
         return static::query()
             ->where('name', 'like', '%' . $string . '%') // Added for MySQL 5.6 hotfix
@@ -76,7 +76,7 @@ class Tag extends Model implements Sortable
     {
         $locale = $locale ?? app()->getLocale();
 
-        $string = '"' . $locale . '": "' . $name . '"'; // Added for MySQL 5.6 hotfix
+        $string = '"' . $locale . '":"' . $name . '"'; // Added for MySQL 5.6 hotfix
 
         return static::query()
             ->where('name', 'like', '%' . $string . '%') // Added for MySQL 5.6 hotfix
